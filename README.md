@@ -37,4 +37,4 @@ output: postgres://test:test@10.10.10.1:5454/test_db?sslmode=verify-ca&pool_max_
       "schema": "test_schema"
     }
     ```
-output: postgres://test:test@1.1.1.1:5555,2.2.2.2:5555/test_db?sslmode=verify-ca&pool_max_conns=100
+output: postgres://test:test@1.1.1.1:5555,2.2.2.2:5555/test_db?pool_max_conns=100

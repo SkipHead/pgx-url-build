@@ -33,7 +33,7 @@ var cluster = Config{
 	SecondHost:         "2.2.2.2",
 	SecondPort:         "5555",
 	DbName:             "test_db",
-	SslMode:            "verify-ca",
+	SslMode:            "",
 	PoolMaxConns:       "100",
 	StatementCacheMode: "",
 	Schema:             "test_schema",
@@ -41,7 +41,7 @@ var cluster = Config{
 
 func TestURLCluster(t *testing.T) {
 	got := cluster.makeURL()
-	want := "postgres://test:test@1.1.1.1:5555,2.2.2.2:5555/test_db?sslmode=verify-ca&pool_max_conns=100"
+	want := "postgres://test:test@1.1.1.1:5555,2.2.2.2:5555/test_db?pool_max_conns=100"
 
 	if got != want {
 		t.Errorf("got %q, wanted %q", got, want)
